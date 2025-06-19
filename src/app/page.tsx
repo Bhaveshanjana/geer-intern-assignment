@@ -1,4 +1,5 @@
 import HeroSection from "@/components/HeroSection";
+import ShopByCategorySection from "@/components/ShopByCategorySection";
 
 export default function Home() {
   return (
@@ -53,6 +54,18 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Shop by category */}
+      <ShopByCategorySection />
+
+      {/* Luxury diamond */}
+      <div className=" max-w-[1450] mx-auto">
+        <img
+          src="/banners/Geer_website_banner1-1.webp"
+          alt=""
+          className="rounded-r-md"
+        />
+      </div>
     </div>
   );
 }
