@@ -1,3 +1,5 @@
+import CollectionSection from "@/components/CollectionSection";
+import FeaturesSection from "@/components/FeaturesSection";
 import HeroSection from "@/components/HeroSection";
 import ShopByCategorySection from "@/components/ShopByCategorySection";
 
@@ -55,10 +57,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Shop by category */}
+      {/* ShopbyCategory Section */}
       <ShopByCategorySection />
 
-      {/* Luxury diamond */}
+      {/* Daimond Section*/}
       <div className=" max-w-[1450] mx-auto">
         <img
           src="/banners/Geer_website_banner1-1.webp"
@@ -66,6 +68,17 @@ export default function Home() {
           className="rounded-r-md"
         />
       </div>
+
+      {/* Collection Section*/}
+      <CollectionSection />
+
+      {/* Inquery Section */}
+      <div className=" max-w-[1450] mx-auto">
+        <img src="/Geer_website_banner2.webp" alt="" className="rounded-lg" />
+      </div>
+
+      {/* Features Section */}
+      <FeaturesSection />
     </div>
   );
 }
