@@ -1,0 +1,74 @@
+[
+  {
+    "id": "1",
+    "name": "Diamond Engagement Ring",
+    "price": 2999.99,
+    "imageUrl": "https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=400&h=400&fit=crop",
+    "description": "Stunning 1-carat diamond engagement ring in 14k white gold setting. Perfect for that special proposal moment.",
+    "category": "Engagement Rings",
+    "createdAt": "2024-01-15T10:30:00Z"
+  },
+  {
+    "id": "2",
+    "name": "Gold Wedding Band",
+    "price": 899.99,
+    "imageUrl": "https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=400&h=400&fit=crop",
+    "description": "Classic 18k gold wedding band with elegant comfort fit design. Timeless and comfortable for everyday wear.",
+    "category": "Wedding Bands",
+    "createdAt": "2024-01-16T14:20:00Z"
+  },
+  {
+    "id": "3",
+    "name": "Sapphire Statement Ring",
+    "price": 1499.99,
+    "imageUrl": "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=400&h=400&fit=crop",
+    "description": "Beautiful blue sapphire ring surrounded by diamonds in sterling silver setting. Eye-catching and elegant.",
+    "category": "Gemstone Rings",
+    "createdAt": "2024-01-17T09:15:00Z"
+  },
+  {
+    "id": "4",
+    "name": "Rose Gold Stacking Rings",
+    "price": 299.99,
+    "imageUrl": "https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=400&h=400&fit=crop",
+    "description": "Set of three delicate rose gold stacking rings with subtle diamond accents. Perfect for layering.",
+    "category": "Fashion Rings",
+    "createdAt": "2024-01-18T11:45:00Z"
+  },
+  {
+    "id": "5",
+    "name": "Vintage Style Ring",
+    "price": 799.99,
+    "imageUrl": "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=400&h=400&fit=crop",
+    "description": "Vintage-inspired ring with intricate filigree design and small diamond center stone. Unique and timeless.",
+    "category": "Vintage Rings",
+    "createdAt": "2024-01-19T16:30:00Z"
+  },
+  {
+    "id": "6",
+    "name": "Sterling Silver Ring",
+    "price": 124.99,
+    "imageUrl": "https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=400&h=400&fit=crop",
+    "description": "Elegant sterling silver ring with minimalist design. Perfect for everyday wear or as a gift.",
+    "category": "Silver Rings",
+    "createdAt": "2024-01-20T13:20:00Z"
+  },
+  {
+    "id": "1750243042039",
+    "name": "Emerald Cut Diamond Ring",
+    "price": 4799.99,
+    "imageUrl": "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=400&h=400&fit=crop",
+    "description": "Stunning emerald cut diamond ring in platinum setting. Sophisticated and elegant design.",
+    "category": "Luxury Rings",
+    "createdAt": "2025-06-18T10:37:22.039Z"
+  },
+  {
+    "id": "1750245755908",
+    "name": "test 01 ",
+    "price": 199.99,
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWm6eeZTGM9siiK1YamFOIShDpOzC5HbD1zA&s",
+    "description": "tets item",
+    "category": "home",
+    "createdAt": "2025-06-18T11:22:35.909Z"
+  }
+]
