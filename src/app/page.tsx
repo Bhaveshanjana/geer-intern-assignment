@@ -1,5 +1,7 @@
 import BestSellerSection from "@/components/BestSellerSection";
 import CollectionSection from "@/components/CollectionSection";
+import CustomerSection from "@/components/CustomerSerction";
+import EssentialSection from "@/components/EssentialSection";
 import FeaturesSection from "@/components/FeaturesSection";
 import FeaturesSection02 from "@/components/FeaturesSection02";
 import HeroSection from "@/components/HeroSection";
@@ -91,7 +93,17 @@ export default function Home() {
 
       {/* Shop By Price Section*/}
       <ShopByPriceSEction />
-      
+
+      {/* Essential Section */}
+      <EssentialSection />
+
+      {/* Kajal aggarwal  */}
+      <div className=" max-w-[1450] mx-auto">
+        <img src="/Geer_website_banner_3.webp" alt="" className="rounded-lg" />
+      </div>
+
+      {/* Customer Review Section*/}
+      <CustomerSection />
     </div>
   );
 }
