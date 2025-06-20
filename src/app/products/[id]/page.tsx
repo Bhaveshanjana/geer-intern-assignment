@@ -1,6 +1,6 @@
-import { notFound } from "next/navigation";
-import ProductDetail from "@/components/ProductDetail";
-import { getProductById } from "@/lib/data";
+import { notFound } from 'next/navigation';
+import ProductDetail from '@/components/ProductDetails';
+import { getProductById } from '@/lib/data';
 
 interface ProductPageProps {
   params: Promise<{
@@ -21,4 +21,4 @@ export default async function ProductPage({ params }: ProductPageProps) {
       <ProductDetail product={product} />
     </div>
   );
-}
+} 
