@@ -1,7 +1,10 @@
+import BestSellerSection from "@/components/BestSellerSection";
 import CollectionSection from "@/components/CollectionSection";
 import FeaturesSection from "@/components/FeaturesSection";
+import FeaturesSection02 from "@/components/FeaturesSection02";
 import HeroSection from "@/components/HeroSection";
 import ShopByCategorySection from "@/components/ShopByCategorySection";
+import ShopByPriceSEction from "@/components/ShopByPriceSection";
 
 export default function Home() {
   return (
@@ -79,6 +82,16 @@ export default function Home() {
 
       {/* Features Section */}
       <FeaturesSection />
+
+      {/* Best seller Section */}
+      <BestSellerSection />
+
+      {/* features Section 02 */}
+      <FeaturesSection02 />
+
+      {/* Shop By Price Section*/}
+      <ShopByPriceSEction />
+      
     </div>
   );
 }
