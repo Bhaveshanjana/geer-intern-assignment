@@ -1,76 +1,66 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
+import { Product } from "@/types/product";
 
-interface Product {
-  id: string;
-  name: string;
-  image: string;
-  originalPrice: number;
-  discountedPrice: number;
-  alt: string;
-}
-
-interface BestSellerCarouselProps {
-  products?: Product[];
-}
-
-const BestSellerSection: React.FC<BestSellerCarouselProps> = ({
-  products = [
-    {
-      id: "1",
-      name: "Aurora Dual-Stone Designer Ring",
-      image: "/rings/Bangles.webp",
-      originalPrice: 60599,
-      discountedPrice: 55873,
-      alt: "Aurora Dual-Stone Designer Ring",
-    },
-    {
-      id: "2",
-      name: "Celestia Bloom Diamond Statement...",
-      image: "/rings/Bracelets.webp",
-      originalPrice: 40048,
-      discountedPrice: 36837,
-      alt: "Celestia Bloom Diamond Statement Ring",
-    },
-    {
-      id: "3",
-      name: "Aurora Bloom Pear & Marquise Dia...",
-      image: "/rings/Earring.webp",
-      originalPrice: 53244,
-      discountedPrice: 48983,
-      alt: "Aurora Bloom Pear & Marquise Diamond Ring",
-    },
-    {
-      id: "4",
-      name: "Celestia Luxe Twin-Baguette Diamo...",
-      image: "/rings/Necklaces.webp",
-      originalPrice: 65617,
-      discountedPrice: 60281,
-      alt: "Celestia Luxe Twin-Baguette Diamond Ring",
-    },
-    {
-      id: "5",
-      name: "Elegant Solitaire Diamond Ring",
-      image: "/rings/Pendants.webp",
-      originalPrice: 45000,
-      discountedPrice: 41250,
-      alt: "Elegant Solitaire Diamond Ring",
-    },
-    {
-      id: "6",
-      name: "Royal Crown Diamond Ring",
-      image: "/rings/images/ring-6.jpg",
-      originalPrice: 75000,
-      discountedPrice: 68750,
-      alt: "Royal Crown Diamond Ring",
-    },
-  ],
-}) => {
+const BestSellerSection = () => {
+  const [products, setProducts] = useState<Product[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  const fetchProducts = async () => {
+    try {
+      setLoading(true);
+      const response = await fetch("/api/products");
+      const data = await response.json();
+
+      if (data.success) {
+        setProducts(data.data);
+      } else {
+        setError("Failed to fetch products");
+      }
+    } catch (error) {
+      setError("Error loading products");
+      console.error("Error fetching products:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
+  useEffect(() => {
+    fetchProducts(); // Call fetchProducts when the component mounts
+  }, []);
+
+  useEffect(() => {
+    console.log("Loading:", loading);
+    console.log("Error:", error);
+    console.log("Products:", products);
+  }, [loading, error, products]);
+
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center py-12">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-amber-600"></div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="text-center py-12">
+        <p className="text-red-600  mb-4">{error}</p>
+        <button
+          onClick={fetchProducts}
+          className="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-md transition-colors"
+        >
+          Try Again
+        </button>
+      </div>
+    );
+  }
 
   const scrollLeft = () => {
     if (scrollContainerRef.current) {
@@ -134,15 +124,16 @@ const BestSellerSection: React.FC<BestSellerCarouselProps> = ({
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
           {products.map((product) => (
-            <div
+            <Link
+              href={`/products/${product.id}`}
               key={product.id}
               className="flex-shrink-0 w-80 group cursor-pointer"
             >
               {/* Product Image */}
               <div className="relative w-full h-64 bg-gray-50 rounded-lg overflow-hidden mb-4 group-hover:shadow-lg transition-shadow duration-300">
                 <Image
-                  src={product.image}
-                  alt={product.alt}
+                  src={product.imageUrl}
+                  alt="logo"
                   fill
                   className="object-contain p-4 group-hover:scale-105 transition-transform duration-300"
                   sizes="(max-width: 768px) 100vw, 320px"
@@ -160,16 +151,16 @@ const BestSellerSection: React.FC<BestSellerCarouselProps> = ({
                 <div className="flex items-center gap-3">
                   {/* Original Price */}
                   <span className="text-gray-400 text-sm line-through">
-                    {formatPrice(product.originalPrice)}
+                    1200
                   </span>
 
                   {/* Discounted Price */}
                   <span className="text-gray-900 font-semibold text-lg">
-                    {formatPrice(product.discountedPrice)}
+                    {formatPrice(product.price)}
                   </span>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

@@ -1,3 +1,5 @@
+"use client"
+
 import BestSellerSection from "@/components/BestSellerSection";
 import CareGuidSection from "@/components/CareGuidSection";
 import CollectionSection from "@/components/CollectionSection";
@@ -11,8 +13,11 @@ import HeroSection from "@/components/HeroSection";
 import ShapeSection from "@/components/ShapSection";
 import ShopByCategorySection from "@/components/ShopByCategorySection";
 import ShopByPriceSEction from "@/components/ShopByPriceSection";
+import { Product } from "@/types/product";
+import { useState } from "react";
 
 export default function Home() {
+
   return (
     <div className="">
       <HeroSection />
