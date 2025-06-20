@@ -91,7 +91,7 @@ export default function AddProductForm({ onProductAdded }: AddProductFormProps) 
             step="0.01"
             min="0"
             required
-            value={formData.price}
+            // value={formData.price}
             onChange={(e) => setFormData({ ...formData, price: parseFloat(e.target.value) })}
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           />

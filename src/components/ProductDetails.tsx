@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import Link from 'next/link';
-import { Product } from '@/types/product';
+import Image from "next/image";
+import Link from "next/link";
+import { Product } from "@/types/product";
 
 interface ProductDetailProps {
   product: Product;
@@ -27,24 +27,24 @@ export default function ProductDetail({ product }: ProductDetailProps) {
         {/* Product Info */}
         <div className="space-y-6">
           <div>
-            <h1 className="text-3xl font-bold text-gray-800 dark:text-white mb-2">
+            <h1 className="text-3xl font-bold text-gray-800  mb-2">
               {product.name}
             </h1>
             {product.category && (
-              <p className="text-amber-600 dark:text-amber-400 font-medium">{product.category}</p>
+              <p className="text-amber-600  font-medium">{product.category}</p>
             )}
           </div>
 
-          <div className="text-4xl font-bold text-amber-600 dark:text-amber-400">
+          <div className="text-4xl font-bold text-amber-600 ">
             ${product.price.toFixed(2)}
           </div>
 
           {product.description && (
             <div>
-              <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-2">
+              <h3 className="text-lg font-semibold text-gray-800  mb-2">
                 Description
               </h3>
-              <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+              <p className="text-gray-600  leading-relaxed">
                 {product.description}
               </p>
             </div>
@@ -62,4 +62,4 @@ export default function ProductDetail({ product }: ProductDetailProps) {
       </div>
     </div>
   );
-} 
+}

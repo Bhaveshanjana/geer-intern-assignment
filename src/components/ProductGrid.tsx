@@ -88,7 +88,7 @@ export default function ProductGrid({
   if (error) {
     return (
       <div className="text-center py-12">
-        <p className="text-red-600 dark:text-red-400 mb-4">{error}</p>
+        <p className="text-red-600  mb-4">{error}</p>
         <button
           onClick={fetchProducts}
           className="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-md transition-colors"
@@ -103,10 +103,10 @@ export default function ProductGrid({
     if (searchTerm) {
       return (
         <div className="text-center py-12">
-          <p className="text-gray-600 dark:text-gray-300 mb-4">
+          <p className="text-gray-600  mb-4">
             No rings found matching "{searchTerm}".
           </p>
-          <p className="text-gray-500 dark:text-gray-400">
+          <p className="text-gray-500 ">
             Try adjusting your search terms or browse all rings.
           </p>
         </div>
@@ -114,8 +114,8 @@ export default function ProductGrid({
     }
     return (
       <div className="text-center py-12">
-        <p className="text-gray-600 dark:text-gray-300 mb-4">No rings found.</p>
-        <p className="text-gray-500 dark:text-gray-400">
+        <p className="text-gray-600  mb-4">No rings found.</p>
+        <p className="text-gray-500 ">
           Try adding some rings to see them here.
         </p>
       </div>
