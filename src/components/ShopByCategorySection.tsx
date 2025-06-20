@@ -82,7 +82,7 @@ export default function ShopByCategorySection({
   return (
     <section className={`py-8 md:py-12 lg:py-9 ${className}`}>
       <div className="max-w-[1400] mx-auto px-4">
-        <h1 className="text-3xl font-bold text-center mb-12">
+        <h1 className="text-3xl font-bold text-center mb-6">
           Shop By Category
         </h1>
         {/* Grid Layout */}
@@ -101,7 +101,7 @@ export default function ShopByCategorySection({
                   src={category.image}
                   alt={category.alt}
                   fill
-                  className="object-cover"
+                  className="object-cover rounded-sm"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 16.66vw"
                 />
               </div>

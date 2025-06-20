@@ -43,8 +43,8 @@ const CollectionSection: React.FC<ExploreCollectionsProps> = ({
   return (
     <div className="w-full max-w-7xl mx-auto px-4 py-12">
       {/* Header */}
-      <div className="text-center mb-12">
-        <h1 className="text-4xl md:text-4xl font-bold text-gray-900 tracking-wide">
+      <div className="text-center mb-6">
+        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 tracking-wide">
           Explore Collections
         </h1>
       </div>

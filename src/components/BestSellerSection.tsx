@@ -104,7 +104,7 @@ const BestSellerSection: React.FC<BestSellerCarouselProps> = ({
     <div className="w-full max-w-7xl mx-auto px-4 py-12">
       {/* Header */}
       <div className="text-center mb-12">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 tracking-wide">
+        <h1 className="text-3xl md:text-5xl font-bold text-gray-900 tracking-wide">
           Best Seller
         </h1>
       </div>
@@ -181,23 +181,6 @@ const BestSellerSection: React.FC<BestSellerCarouselProps> = ({
           <span className="absolute top-0 left-0 w-full h-0 bg-black transition-all duration-300 group-hover:h-full"></span>
         </button>
       </div>
-
-      {/* Custom scrollbar hide styles */}
-      <style jsx>{`
-        .scrollbar-hide {
-          -ms-overflow-style: none;
-          scrollbar-width: none;
-        }
-        .scrollbar-hide::-webkit-scrollbar {
-          display: none;
-        }
-        .line-clamp-2 {
-          display: -webkit-box;
-          -webkit-line-clamp: 2;
-          -webkit-box-orient: vertical;
-          overflow: hidden;
-        }
-      `}</style>
     </div>
   );
 };

@@ -1,6 +1,6 @@
 export default function HeroSection() {
   return (
-    <section className="relative w-full h-screen overflow-hidden mt-12 rounded-xl">
+    <section className="relative mx-1 h-screen overflow-hidden mt-12 rounded-xl">
       <video
         autoPlay
         muted

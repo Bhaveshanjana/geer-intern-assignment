@@ -67,7 +67,6 @@ const CustomerSection: React.FC<CustomerReviewsProps> = ({
 
       {/* Reviews Container */}
       <div className="relative">
-        {/* Navigation Buttons - Hidden on mobile, visible on tablet+ */}
         <button
           onClick={goToPrevious}
           className="hidden sm:block absolute -left-4 lg:-left-8 top-1/2 -translate-y-1/2 z-10 bg-white shadow-lg rounded-full p-2 lg:p-3 hover:shadow-xl transition-all duration-300 border border-gray-200 hover:bg-gray-50"
@@ -118,7 +117,7 @@ const CustomerSection: React.FC<CustomerReviewsProps> = ({
                   </div>
 
                   {/* Light Review Card */}
-                  <div className="order-1 lg:order-2 bg-gray-50 text-gray-800 p-6 sm:p-8 lg:p-12 flex flex-col justify-center rounded-2xl sm:rounded-3xl relative">
+                  <div className="order-1 lg:order-2 bg-gray-200 text-gray-800 p-6 sm:p-8 lg:p-12 flex flex-col justify-center rounded-2xl sm:rounded-3xl relative">
                     {/* Large Quote Mark */}
                     <div className="absolute top-4 right-4 sm:top-6 sm:right-6 lg:top-8 lg:right-8 text-4xl sm:text-5xl lg:text-6xl text-gray-300 font-serif leading-none">
                       "
@@ -141,7 +140,7 @@ const CustomerSection: React.FC<CustomerReviewsProps> = ({
         </div>
 
         {/* Mobile Navigation Buttons */}
-        <div className="flex sm:hidden justify-center mt-6 space-x-4">
+        <div className="flex sm:hidden justify-center  space-x-4">
           <button
             onClick={goToPrevious}
             className="bg-white shadow-lg rounded-full p-3 hover:shadow-xl transition-all duration-300 border border-gray-200 hover:bg-gray-50"
@@ -156,22 +155,6 @@ const CustomerSection: React.FC<CustomerReviewsProps> = ({
           >
             <ChevronRight className="w-5 h-5 text-gray-600" />
           </button>
-        </div>
-
-        {/* Dots Indicator */}
-        <div className="flex justify-center mt-6 sm:mt-8 space-x-3">
-          {reviews.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => goToSlide(index)}
-              className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
-                index === currentIndex
-                  ? "bg-gray-800 w-6 sm:w-8"
-                  : "bg-gray-300 hover:bg-gray-400"
-              }`}
-              aria-label={`Go to review ${index + 1}`}
-            />
-          ))}
         </div>
       </div>
     </div>

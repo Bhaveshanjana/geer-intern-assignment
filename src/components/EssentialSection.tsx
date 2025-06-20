@@ -54,7 +54,7 @@ const EssentialSection: React.FC<EssentialsForYouProps> = ({
             className="group cursor-pointer transform transition-all duration-300 hover:scale-[1.02]"
           >
             {/* Card Container */}
-            <div className="relative w-full h-64 md:h-72 lg:h-75 rounded-full overflow-hidden shadow-lg group-hover:shadow-xl transition-shadow duration-300">
+            <div className="relative w-full h-28 md:h-72 lg:h-75 rounded-full overflow-hidden shadow-lg group-hover:shadow-xl transition-shadow duration-300">
               {/* Background Image */}
               <Image
                 src={essential.image}

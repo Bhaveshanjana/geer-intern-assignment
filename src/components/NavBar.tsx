@@ -20,13 +20,13 @@ export default function Navbar() {
   return (
     <nav className="bg-white opacity-90 backdrop-blur-xl  shadow-sm border-b border-gray-100  sticky top-0 z-50 transition-colors duration-300">
       <div className="max-w-8xl  px-4 lg:px-12">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center md:h-16 h-14">
           {/* Logo */}
           <Link
             href="/"
             className="text-2xl font-bold text-black hover:text-gray-600  transition-colors"
           >
-            <img src="/logo/logo.webp" alt="logo.png" className="h-12" />
+            <img src="/logo/logo.webp" alt="logo.png" className="md:h-12 h-10" />
           </Link>
 
           {/* Desktop Navigation */}
