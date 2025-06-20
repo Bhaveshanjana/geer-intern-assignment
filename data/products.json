@@ -61,14 +61,5 @@
     "description": "Stunning emerald cut diamond ring in platinum setting. Sophisticated and elegant design.",
     "category": "Luxury Rings",
     "createdAt": "2025-06-18T10:37:22.039Z"
-  },
-  {
-    "id": "1750245755908",
-    "name": "test 01 ",
-    "price": 199.99,
-    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWm6eeZTGM9siiK1YamFOIShDpOzC5HbD1zA&s",
-    "description": "tets item",
-    "category": "home",
-    "createdAt": "2025-06-18T11:22:35.909Z"
   }
 ]
