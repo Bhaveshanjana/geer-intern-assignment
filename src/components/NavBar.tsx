@@ -26,7 +26,7 @@ export default function Navbar() {
             href="/"
             className="text-2xl font-bold text-black hover:text-gray-600  transition-colors"
           >
-            <img src="logo.webp" alt="logo.png" className="h-12" />
+            <img src="/logo/logo.webp" alt="logo.png" className="h-12" />
           </Link>
 
           {/* Desktop Navigation */}
